@@ -1,7 +1,11 @@
-plugins { id 'com.android.application' }
+plugins {
+    id 'com.android.application'
+}
+
 android {
     namespace "com.verumomnis.fraudfirewall"
     compileSdk 34
+
     defaultConfig {
         applicationId "com.verumomnis.fraudfirewall"
         minSdk 21
@@ -9,4 +13,9 @@ android {
         versionCode 1
         versionName "1.0"
     }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
 }
