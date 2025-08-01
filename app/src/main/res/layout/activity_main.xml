@@ -1,5 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:text="Hello FraudFirewall"
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#121212"
+android:orientation="vertical"
+android:padding="24dp"
+tools:context=".MainActivity">
+
+<!-- Logo + Title -->
+<TextView
+    android:id="@+id/logoText"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="wrap_content"
+    android:text="Verum Omnis"
+    android:textColor="#FFFFFF"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:layout_marginBottom="8dp" />
+
+<TextView
+    android:id="@+id/subtitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="The Whole Truth"
+    android:textColor="#BBBBBB"
+    android:textSize="16sp"
+    android:gravity="center"
+    android:layout_marginBottom="32dp" />
+
+<!-- Upload Button -->
+<Button
+    android:id="@+id/uploadBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Upload Document"
+    android:backgroundTint="#2C91F0"
+    android:textColor="#FFFFFF"
+    android:layout_marginBottom="16dp" />
+
+<!-- Run Forensic Check Button -->
+<Button
+    android:id="@+id/forensicBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Run Forensic Check"
+    android:backgroundTint="#4CAF50"
+    android:textColor="#FFFFFF"
+    android:layout_marginBottom="24dp" />
+
+<!-- Result Card Placeholder -->
+<TextView
+    android:id="@+id/resultBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1E1E1E"
+    android:textColor="#CCCCCC"
+    android:text="Awaiting input..."
+    android:padding="16dp"
+    android:textSize="14sp"
+    android:layout_marginBottom="16dp" />
+
+<!-- Footer -->
+<TextView
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="✓ Patent Pending | Verum Omnis v1.0"
+    android:textColor="#666666"
+    android:textSize="12sp"
+    android:gravity="center" />
+
+</LinearLayout>
