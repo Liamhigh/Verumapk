@@ -4,3 +4,4 @@ build
 *.aab
 node_modules
 gradle-*.zip
+gradle-*.zip
