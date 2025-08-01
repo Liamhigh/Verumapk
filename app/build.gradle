@@ -1,3 +1,34 @@
+
+Add this block at the bottom if it doesn't exist:
+
+dependencies { implementation 'androidx.appcompat:appcompat:1.6.1' implementation 'com.google.android.material:material:1.9.0' }
+
+Save and exit: CTRL + O, ENTER, CTRL + X
+
+Step 2: Define colors.xml
+
+mkdir -p app/src/main/res/values cat > app/src/main/res/values/colors.xml <<'EOF' <resources> <color name="colorPrimary">#3F51B5</color> <color name="colorPrimaryDark">#303F9F</color> <color name="colorAccent">#FF4081</color> </resources> EOF
+
+Step 3: Define styles.xml
+
+cat > app/src/main/res/values/styles.xml <<'EOF' <resources> <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"> <item name="colorPrimary">@color/colorPrimary</item> <item name="colorPrimaryDark">@color/colorPrimaryDark</item> <item name="colorAccent">@color/colorAccent</item> </style> </resources> EOF
+
+Step 4: Update AndroidManifest.xml to apply the AppTheme
+
+cat > app/src/main/AndroidManifest.xml <<'EOF' <manifest xmlns:android="http://schemas.android.com/apk/res/android"> <application
+android:label="@string/app_name"
+android:theme="@style/AppTheme"> <activity
+android:name=".MainActivity"
+android:exported="true"> <intent-filter> <action android:name="android.intent.action.MAIN" /> <category android:name="android.intent.category.LAUNCHER" /> </intent-filter> </activity> </application> </manifest> EOF
+
+Step 5: Commit and Push Changes
+
+git add . git commit -m "Fix AppCompat theme and resource issues" git push
+
+Step 6: Re-run GitHub Actions build
+
+termux-open-url "https://github.com/Liamhigh/Verumapk/actions"
+
 plugins {
     id 'com.android.application'
 }
